@@ -1,8 +1,0 @@
-:root{
---shadow-card:0 4px 24px rgba(32,34,38,.06);
---shadow-card-hover:0 12px 32px rgba(32,34,38,.12);
---shadow-raised:0 10px 30px rgba(32,34,38,.10);
---shadow-dark-panel:0 18px 48px rgba(32,34,38,.18);
---glow-yellow:0 0 0 6px rgba(253,192,51,.28),0 10px 28px rgba(253,192,51,.45);
---shadow-inset-line:inset 0 0 0 1px var(--line-200);
-}
