@@ -1,0 +1,10 @@
+:root{
+--dur-fast:140ms; /* @kind other */
+--dur:220ms; /* @kind other */
+--dur-slow:400ms; /* @kind other */
+--ease-out:cubic-bezier(.22,.61,.36,1); /* @kind other */
+--ease-in-out:cubic-bezier(.4,0,.2,1); /* @kind other */
+--press-scale:0.97; /* @kind other */
+--hover-lift:-2px; /* @kind other */
+--transition-interactive:background-color var(--dur) var(--ease-out),color var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out),transform var(--dur-fast) var(--ease-out); /* @kind other */
+}

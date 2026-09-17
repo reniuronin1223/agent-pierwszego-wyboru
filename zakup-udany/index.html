@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Dziękuję · masz miejsce na webinarze APW</title>
+<link rel="stylesheet" href="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/tokens/fonts.css" />
+<link rel="stylesheet" href="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/tokens/colors.css" />
+<link rel="stylesheet" href="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/tokens/typography.css" />
+<link rel="stylesheet" href="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/tokens/spacing.css" />
+<link rel="stylesheet" href="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/tokens/radius.css" />
+<link rel="stylesheet" href="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/tokens/shadows.css" />
+<link rel="stylesheet" href="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/tokens/motion.css" />
+<link rel="stylesheet" href="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/styles.css" />
+<script src="../_ds/agent-pierwszego-wyboru-design-system-937c5b0d-c60d-4f33-8e95-fc064cfa292a/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--surface-page); color: var(--text-body); font-family: var(--font-body); font-size: var(--fs-body); line-height: var(--lh-body); -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: var(--text-strong); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--yellow-700); }
+  @keyframes apwMarkIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { [data-mark] { animation: none !important; } }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: var(--surface-page); display: flex; flex-direction: column;">
+
+  <header style="background: var(--surface-dark); padding: var(--space-4) var(--container-pad);">
+    <div style="max-width: var(--container-max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); align-items: center; justify-content: space-between;">
+      <a href="../index.html" style="font-family: var(--font-display); font-weight: var(--fw-black); font-size: clamp(13px, 1.5vw, 16px); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--text-on-dark); text-decoration: none;" style-hover="color: var(--yellow-500);">Agent Pierwszego Wyboru</a>
+      <span style="font-size: var(--fs-micro); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--yellow-500); font-weight: var(--fw-extrabold);">Zamówienie {{ orderId }}</span>
+    </div>
+  </header>
+
+  <main style="flex: 1; padding: var(--space-12) var(--container-pad) var(--space-16);">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-10);">
+
+      <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-5); text-align: center;">
+        <span data-mark="1" style="width: 84px; height: 84px; border-radius: var(--radius-pill); background: var(--surface-brand); color: var(--ink-900); display: inline-flex; align-items: center; justify-content: center; font-size: 36px; font-weight: var(--fw-black); box-shadow: var(--glow-yellow); animation: apwMarkIn var(--dur) var(--ease-out) both;">✓</span>
+        <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.EyebrowLabel" tone="dark" tilt="-2" hint-size="auto,40px">Płatność przyjęta</x-import>
+        <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.SectionHeading" align="center" size="h2" as="h1" hint-size="100%,140px">Masz miejsce na webinarze</x-import>
+        <p style="margin: 0; max-width: 620px; font-size: var(--fs-body); line-height: var(--lh-body); color: var(--text-body); text-wrap: pretty;">Widzimy się <strong style="font-weight: var(--fw-extrabold); color: var(--text-strong);">{{ termin }}</strong>. Link do wejścia wysłałem na <strong style="font-weight: var(--fw-extrabold); color: var(--text-strong);">{{ email }}</strong>. Fakturę dostaniesz na ten sam adres w ciągu 24 godzin.</p>
+        <span style="position: relative; display: inline-flex; overflow: hidden; padding: 16px; margin: -16px; border-radius: var(--radius-pill);">
+          <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.Button" variant="primary" size="lg" on-click="{{ goCourse }}" hint-size="auto,60px">Dodaję webinar do kalendarza</x-import>
+        </span>
+      </div>
+
+      <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.Card" tone="light" pad="md" radius="card" style="{{ fullWidth }}" hint-size="100%,220px">
+        <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+          <span style="font-size: var(--fs-micro); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--yellow-700); font-weight: var(--fw-extrabold);">Potwierdzenie</span>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-5) var(--space-8);">
+            <div style="display: flex; flex-direction: column; gap: var(--space-1);">
+              <span style="font-size: var(--fs-micro); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--text-muted);">Zamówienie</span>
+              <span style="font-family: var(--font-display); font-weight: var(--fw-extrabold); font-size: var(--fs-body-sm); color: var(--text-strong);">{{ orderId }}</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: var(--space-1);">
+              <span style="font-size: var(--fs-micro); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--text-muted);">Produkt</span>
+              <span style="font-family: var(--font-display); font-weight: var(--fw-extrabold); font-size: var(--fs-body-sm); color: var(--text-strong);">Webinar APW · model</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: var(--space-1);">
+              <span style="font-size: var(--fs-micro); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--text-muted);">Zapłacono</span>
+              <span style="font-family: var(--font-display); font-weight: var(--fw-extrabold); font-size: var(--fs-body-sm); color: var(--text-strong);">{{ price }}</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: var(--space-1);">
+              <span style="font-size: var(--fs-micro); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--text-muted);">Termin</span>
+              <span style="font-family: var(--font-display); font-weight: var(--fw-extrabold); font-size: var(--fs-body-sm); color: var(--text-strong);">{{ termin }}</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: var(--space-1);">
+              <span style="font-size: var(--fs-micro); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--text-muted);">Metoda</span>
+              <span style="font-family: var(--font-display); font-weight: var(--fw-extrabold); font-size: var(--fs-body-sm); color: var(--text-strong);">{{ method }}</span>
+            </div>
+          </div>
+        </div>
+      </x-import>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+        <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.SectionHeading" align="left" size="h3" as="h2" hint-size="100%,80px">Co robisz od teraz</x-import>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--card-gap);">
+          <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.ProcessStep" step="01" title="Sprawdź skrzynkę" body="Mail z linkiem do webinaru powinien być u Ciebie w ciągu kilku minut. Jeśli go nie widzisz, zajrzyj do folderu ofert." tilt="-1" hint-size="100%,220px"></x-import>
+          <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.ProcessStep" step="02" title="Wpisz termin w kalendarz" body="Webinar jest na żywo i nie powtarzam go dla spóźnionych. Ustaw przypomnienie 15 minut przed startem." tilt="1" hint-size="100%,220px"></x-import>
+          <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.ProcessStep" step="03" title="Przygotuj pytania" body="Ostatni blok to czas na Twoje pytania. Wypisz wcześniej dwa lub trzy, wtedy wyciśniesz z niego najwięcej." tilt="-1" hint-size="100%,220px"></x-import>
+        </div>
+      </div>
+
+      <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.ClaimBanner" primary="Wejdź 5 minut wcześniej" secondary="Zaczynam punktualnie i nie przerywam na powitania. Wcześniejsze wejście sprawdza też dźwięk i połączenie." style="{{ fullWidth }}" hint-size="100%,180px"></x-import>
+
+      <x-import component-from-global-scope="AgentPierwszegoWyboruDesignSystem_937c5b.Card" tone="dark" pad="md" radius="card" style="{{ fullWidth }}" hint-size="100%,200px">
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-5) var(--space-8); align-items: center; justify-content: space-between;">
+          <div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2);">
+            <span style="font-family: var(--font-display); font-weight: var(--fw-extrabold); font-size: var(--fs-caption); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--text-on-dark);">Mail nie dotarł ?</span>
+            <span style="font-size: var(--fs-micro); line-height: var(--lh-body); color: var(--text-on-dark-muted);">Napisz albo zadzwoń, odpisuję tego samego dnia. Podaj numer zamówienia {{ orderId }}, wyślę link ponownie.</span>
+          </div>
+          <div style="flex: 0 0 auto; display: flex; flex-direction: column; gap: var(--space-1);">
+            <a href="mailto:kontakt@agentpierwszegowyboru.pl" style="font-size: var(--fs-caption); font-weight: var(--fw-bold); color: var(--yellow-500);">kontakt@agentpierwszegowyboru.pl</a>
+            <a href="tel:+48000000000" style="font-size: var(--fs-caption); font-weight: var(--fw-bold); color: var(--yellow-500);">+48 000 000 000</a>
+          </div>
+        </div>
+      </x-import>
+    </div>
+  </main>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;webinarDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;[DATA] o [GODZINA]&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Webinar&quot;},&quot;orderId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;APW-2026-0148&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Zamówienie&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;anna.kowalska@email.pl&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Zamówienie&quot;},&quot;price&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;470 zł&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Zamówienie&quot;},&quot;method&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;BLIK&quot;,&quot;Przelew online&quot;,&quot;Karta&quot;],&quot;default&quot;:&quot;BLIK&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Zamówienie&quot;},&quot;courseUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Zamówienie&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      fullWidth: { width: '100%' },
+      orderId: this.props.orderId || 'APW-2026-0148',
+      email: this.props.email || 'anna.kowalska@email.pl',
+      price: this.props.price || '470 zł',
+      method: this.props.method || 'BLIK',
+      termin: this.props.webinarDate || '[DATA] o [GODZINA]',
+      goCourse: () => {
+        const url = this.props.courseUrl;
+        if (url) window.location.href = url;
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
